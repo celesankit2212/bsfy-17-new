@@ -1,131 +1,123 @@
 jobs:
   include:
-    - os: windows
-      language: c
-      arch: amd64
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-    - os: osx
-      language: c
-      arch: amd64
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-    - os: freebsd
-      language: c
-      arch: amd64
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-    - os: linux
-      language: c
-      dist: xenial
-      arch: amd64
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-    - os: linux
-      language: c
-      dist: bionic
-      arch: amd64
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-    - os: linux
-      language: c
-      dist: focal
-      arch: amd64
-      script:
-        - clang -coverage -O0 hello_world.c -o hello_world
-        - ./hello_world
-    - os: linux
-      dist: xenial
-      language: python
-      arch: amd64
-      script:
-        - python hello_world.py
-#     - os: freebsd
-#       language: python
-#       arch: amd64
-#       script:
-#         - python hello_world.py
-    - os: linux
-      language: python
-      dist: xenial
-      arch: amd64
-      script:
-        - python hello_world.py
-    - os: linux
-      language: python
-      dist: bionic
-      arch: amd64
-      script:
-        - python hello_world.py
-    - os: linux
-      language: python
-      dist: focal
-      arch: amd64
-      script:
-        - python hello_world.py
-    - os: linux
-      dist: xenial
-      language: java
-      arch: amd64
-      script:
-        - javac hello_world.java
-        - java HelloWorld
-    - os: linux
-      language: java
-      dist: xenial
-      arch: amd64
-      script:
-        - javac hello_world.java
-        - java HelloWorld
-#     - os: freebsd
-#       language: java
-#       arch: amd64
-#       script:
-#         - javac hello_world.java
-#         - java HelloWorld
-    - os: linux
-      language: java
-      dist: bionic
-      arch: amd64
-      script:
-        - javac hello_world.java
-        - java HelloWorld
-    - os: linux
-      language: java
-      dist: focal
-      arch: amd64
-      script:
-        - javac hello_world.java
-        - java HelloWorld
-    - os: windows
-      language: cpp
-      arch: amd64
-      script:
-        - g++ hello_world.cpp -o hello_world
-        - ./hello_world
-    - os: linux
-      language: cpp
-      dist: xenial
-      arch: amd64
-      script:
-        - g++ hello_world.cpp -o hello_world
-        - ./hello_world
-    - os: linux
-      language: cpp
-      dist: bionic
-      arch: amd64
-      script:
-        - g++ hello_world.cpp -o hello_world
-        - ./hello_world
-    - os: linux
-      language: cpp
-      dist: focal
-      arch: amd64
-      script:
-        - g++ hello_world.cpp -o hello_world
-        - ./hello_world
+  - os: windows
+    language: c
+    arch: amd64
+    script:
+    - clang -coverage -O0 hello_world.c -o hello_world
+    - "./hello_world"
+  - os: osx
+    language: c
+    arch: amd64
+    script:
+    - clang -coverage -O0 hello_world.c -o hello_world
+    - "./hello_world"
+  - os: freebsd
+    language: c
+    arch: amd64
+    script:
+    - clang -coverage -O0 hello_world.c -o hello_world
+    - "./hello_world"
+  - os: linux
+    language: c
+    dist: xenial
+    arch: amd64
+    script:
+    - clang -coverage -O0 hello_world.c -o hello_world
+    - "./hello_world"
+  - os: linux
+    language: c
+    dist: bionic
+    arch: amd64
+    script:
+    - clang -coverage -O0 hello_world.c -o hello_world
+    - "./hello_world"
+  - os: linux
+    language: c
+    dist: focal
+    arch: amd64
+    script:
+    - clang -coverage -O0 hello_world.c -o hello_world
+    - "./hello_world"
+  - os: linux
+    dist: xenial
+    language: python
+    arch: amd64
+    script:
+    - python hello_world.py
+  - os: linux
+    language: python
+    dist: xenial
+    arch: amd64
+    script:
+    - python hello_world.py
+  - os: linux
+    language: python
+    dist: bionic
+    arch: amd64
+    script:
+    - python hello_world.py
+  - os: linux
+    language: python
+    dist: focal
+    arch: amd64
+    script:
+    - python hello_world.py
+  - os: linux
+    dist: xenial
+    language: java
+    arch: amd64
+    script:
+    - javac hello_world.java
+    - java HelloWorld
+  - os: linux
+    language: java
+    dist: xenial
+    arch: amd64
+    script:
+    - javac hello_world.java
+    - java HelloWorld
+  - os: linux
+    language: java
+    dist: bionic
+    arch: amd64
+    script:
+    - javac hello_world.java
+    - java HelloWorld
+  - os: linux
+    language: java
+    dist: focal
+    arch: amd64
+    script:
+    - javac hello_world.java
+    - java HelloWorld
+  - os: windows
+    language: cpp
+    arch: amd64
+    script:
+    - g++ hello_world.cpp -o hello_world
+    - "./hello_world"
+  - os: linux
+    language: cpp
+    dist: xenial
+    arch: amd64
+    script:
+    - g++ hello_world.cpp -o hello_world
+    - "./hello_world"
+  - os: linux
+    language: cpp
+    dist: bionic
+    arch: amd64
+    script:
+    - g++ hello_world.cpp -o hello_world
+    - "./hello_world"
+  - os: linux
+    language: cpp
+    dist: focal
+    arch: amd64
+    script:
+    - g++ hello_world.cpp -o hello_world
+    - "./hello_world"
+env:
+  global:
+    secure: sqjFHULuOewqNpCdvmt8nA/R6OQ3EB0Jh+F8wU3jvfLhQFiUhD1PY5zAJ+I7RbMBNRXGw/OSpazhRZt1UuXX19YbMLyWMVzG4XjON7wZVxqda/c+/MxsFBXFyWc5SaFvGUm0uLRA3G8/pT5HargXZpklCg1qwVh4rWjMNqJlMD2zWGhU0b2fbU5b6q9guhgFx+GssK2K9cYy83wKIHaeypmpxty6hput7SXs9xvsXQ4OBxS5bnq2LitOqcCyTz4q0hw3NATT3vLdcQhLZGTuwnExPdzY2seLfmDRQsztx3Iak0C3rHXlmiF7ZBnguyuE6iB+o5UE5Ezmf6TW3Db0uNnTGzb7LyG39UZXbIFguEyvcxeHzjknyq3gGeuMPe3DuAClEoOA5eNojPflrbilNNe73H6tQ7POlCkLIYoSRXeXSHOlGNiaNLGfeq+K8xoYfcPd7zPx04eaicohK4Riq3NsJfmc/GrNORCYMY6Eygl0CiG2AAiLJBRcHMDPxBkRZTdJDTEEzNI3PS+K/c+vJDWGcnq2WNaBB2brpxiE9ADbO1VkyxGfqxcvSRJgGz2u0egeseQRCFyu1KlTYVuNKjgpThytmDvSWDdD3RiocxqLxRcolsuecfIJ0XbKL+Aq+0r7i9Z9pB4GDDIxr++3llkvl+1uuTSvz33DXYUa66E=
